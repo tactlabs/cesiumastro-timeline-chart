@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<!--
+        
+    -->
+<!--
+        source-code:https://jsfiddle.net/twuxhsag/
+    -->
+<head>
+    <title>Timeline of Infostellar</title>
+    <style>
+#container {
+  min-width: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+    </style>
+    </head>
+ <body>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/timeline.js"></script>
+    <div id="container"></div>
+<script>
+    Highcharts.chart('container', {
+  chart: {
+    zoomType: 'x',
+    type: 'timeline'
+  },
+  xAxis: {
+    type: 'datetime',
+    visible: false
+  },
+  yAxis: {
+    gridLineWidth: 1,
+    title: null,
+    labels: {
+      enabled: false
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  title: {
+    text: 'Timeline of CesiumAstro'
+  },
+  subtitle: {
+    text: 'Info source: <a href="https://www.cesiumastro.com/newsroom">https://www.cesiumastro.com/newsroom</a>'
+  },
+  tooltip: {
+    style: {
+      width: 300
+    }
+  },
+  series: [{
+    dataLabels: {
+      allowOverlap: false,
+      format: '<span style="color:{point.color}">● </span><span style="font-weight: bold;" > ' +
+        '{point.x:%d %b %Y}</span><br/>{point.label}'
+    },
+    marker: {
+      symbol: 'circle'
+    },
+    data: [{
+      x: Date.UTC(2021, 06, 11),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "The Space Show - Guest Speaker: Shey Sabripour, Founder And CEO Of CesiumAstro."
+    },{
+      x: Date.UTC(2021, 05, 18),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "KXAN-TV - Space Company Expanding In Bee Cave Area With Plans To Bring In More Jobs."
+    },{
+      x: Date.UTC(2021, 05, 15),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "Austin Business Journal - CesiumAstro Plans To Double In Size In Coming Year."
+    },{
+      x: Date.UTC(2021, 04, 25),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "SpaceNews - CesiumAstro Unveils Plan To Test Active Phased Array In Orbit."
+    },{
+      x: Date.UTC(2021, 03, 22),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "BuiltIn - 21 Austin Companies To Watch In 2021."
+    },{
+      x: Date.UTC(2021, 02, 14),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "The Tech Talks Daily Podcast - Space Communications With CesiumAstro."
+    },{
+      x: Date.UTC(2020, 11, 29),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "Austin Inno - The Biggest Austin Startup Fundings Of 2020."
+    },{
+      x: Date.UTC(2020, 11, 17),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "SpaceNews - CesiumAstro Founder Closes In On Decades-Old Dream."
+    },{
+      x: Date.UTC(2019, 02, 14),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "SpaceNews - Satellite Payload Startup Raises $12.4 Million From Airbus Ventures, Other Investors."
+    },{
+      x: Date.UTC(2021, 06, 14),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "CesiumAstro Releases Space Qualified Software-Defined Radio With Open Reconfigurable FPGA."
+    },{
+      x: Date.UTC(2021, 05, 15),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "Opportunity Austin Announces CesiumAstro Expansion In Austin."
+    },{
+      x: Date.UTC(2021, 04, 25),
+    //   name: 'First dogs in space',
+    //   label: 'First dogs in space',
+      description: "Airborne And In-Orbit Communications Leader CesiumAstro, Inc. Readies For First Mission To Launch; Company Wins Swath Of Commercial Milestones."
+    }]
+  }]
+});
+</script>
+</body>
+</html>
